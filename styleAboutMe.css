@@ -1,0 +1,51 @@
+/* CONTENT */
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+#content-a {
+    display: grid;
+    /* grid-auto-rows: max-content; */
+    grid-auto-columns: max-content;
+    grid-template-areas: "header-a about";
+
+    gap: 50px;
+
+    height: calc(100% - 75px);
+
+    align-items: center;
+}
+
+.header-a img{
+    /* float: left; */
+    height: 300px;
+    width: 200px;
+    object-fit: contain;
+    /* border-radius: 100px; */
+
+    /* position: absolute; */
+    animation: bop 2s ease-in-out infinite;
+
+    mix-blend-mode: multiply;
+}
+
+#subtitle-a {
+    width: 200px;
+}
+
+.about {
+    width: calc(100% - 200px);
+}
+
+/* BOP */
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+@keyframes bop {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    
+    50% {
+        transform: translateY(-2%);
+    }
+}
