@@ -4,3 +4,4 @@ Personal project I've been making for about 2 months by now (with a lot of break
 ## POSSIBLE ENHANCEMENTS
 - Integrating MySQL to ease up changing project images. (might have to change hosts though)
 - Adding a 'Commissions' window
+- Optimising views for different screen sizes
