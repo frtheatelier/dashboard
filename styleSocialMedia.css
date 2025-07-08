@@ -1,0 +1,26 @@
+
+#header-row-s {
+    display: inline-flexbox;
+}
+
+#header-s {
+    margin-top: 15px;
+    float: left;
+}
+
+#subtitle-s {
+    margin-top: 15px;
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+
+#links {
+    clear: both;
+    display: flex;
+}
+
+.link-icon {
+    width: 50px;
+}
