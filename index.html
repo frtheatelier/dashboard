@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+	
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="stylePortfolio.css">
+	<link rel="stylesheet" type="text/css" href="styleAboutMe.css">
+	<link rel="stylesheet" type="text/css" href="scrollbar.css">
+	<!-- <link rel='icon' href='images/favicon.ico' type='image/x-icon' sizes="16x16" /> -->
+
+	<!-- js -->
+	<script src="script.js"></script>
+
+	<!-- Vue.js -->
+	<!-- development version, includes helpful console warnings -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+
+	<!-- axios -->
+	<!-- <script src="vue.js"></script>  -->
+	<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> --> 
+
+	<title>fr. the atelier</title>
+
+	<!-- TODO: find better fonts -->
+	<!-- google font lol -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Manrope:wght@200..800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+</head>
+<body>
+	<!-- hover/select audios -->
+	<audio id="lilmati-select" src="assets\523763__lilmati__select-granted-06.wav" preload="auto">Your browser does not support the audio element</audio>
+	<audio id="krokulat-select" src="assets\653382__krokulator__select.wav" preload="auto">Your browser does not support the audio element</audio>
+	<audio id="harrisonlace-select" src="assets\713595__harrisonlace__random_ui_selection.wav" preload="auto">Your browser does not support the audio element</audio>
+
+	<div id="container">
+		<!-- BASE -->
+		<nav id="heading">
+			<div onclick="toggleMute()" class="music upscale-grand">
+				<img src="assets/note.png">
+				<div id="crossline"></div>
+			</div>
+			<p>fr. the atelier</p>
+			<div onclick="displayCredits()" class="star upscale-grand"><img src="assets/star_2.png"></div>
+		</nav>
+		<div id="subcontainer">
+			<div id="bg-radial-top"></div>
+			<div id="bg-radial-bottom"></div>
+			<div id="nox">
+				<img src="assets/nox_soft.png" class="chara">
+				<div class="star" id="star-wrapper">
+					<img src="assets/star.png">
+				</div>
+			</div>
+			<div id="menu">
+				<!-- <a href="" class="menu1">OPTION1</a> -->
+				<button onclick="displayWindow(1)" data-side="20" data-width="25" id="menu1" class="menu">About me</button>
+				<button onclick="displayWindow(2)" data-side="20" data-width="20" id="menu2" class="menu">Works</button>
+				<button onclick="displayWindow(3)" data-side="15" data-width="25" id="menu3" class="menu disabled">Commission</button>
+				<button onclick="displayWindow(4)" data-side="23" data-width="18" id="menu4" class="menu">Social media</button>
+			</div>
+		</div>
+		<div id="handle">
+			<p>FROM<br>THE<br>ATELIER</p>
+			<ul>
+				<li>digital artist</li>
+				<li>computer science major</li>
+			</ul>
+		</div>
+		<div id="current" class="tooltip upscale glow" style="border-bottom: none;">
+			<img src="assets\temp_pfp.png">
+			<div class="title">
+				Becoming Human
+			</div>
+			<span class="tooltiptext">The AU I'm working on for the most part. (project site in progress)</span>
+		</div>
+		<div id="credits" class="credit">
+			<p>art by @frtheatelier</p>
+			<p>sfx by ...</p>
+		</div>
+
+		<!-- WINDOWS - play around later -->
+		<!-- Draggable DIV -->
+		<div id="window1" class="window glass">
+			<!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+			<div id="window1head" class="windowhead">
+				<div class="close-button" onclick="displayWindow(1)">╳</div>
+			</div>
+			<div id="content-a" class="content">
+				<div class="header-a">
+					<img src="assets\clear2.gif" class="headerimg"> <!--todo: replace w other-->
+					<div id="header-text-a" class="headertext-a">
+						<h1 id="header-a">Noctis</h1>
+						<p id="subtitle-a">digital artist and somewhat of a developer</p>
+					</div>
+				</div>
+				<div class="about">
+					<b>Hello, I generally go by</b>  
+					<div class="tooltip">
+						<b>Noctis</b>
+						<span class="tooltiptext">Might switch to my IRL name once I'm comfortable...</span>
+					</div> 
+					<b>online.</b><br>
+					I'm a CS student who happens to draw sometimes
+					
+					<h3>General info</h3>
+					<ul>
+						<li>generally based in 
+							<div class="tooltip">
+								Canada
+								<span class="tooltiptext">I'm from Indonesia though so I may switch locations on breaks.</span>
+							</div>
+						</li>
+						<li>university student of class 2028</li>
+						<li>can speak Bahasa Indonesia, (fluent) English, (conversational) Chinese and baby level French</li>
+					</ul>
+
+					<h3>I do...</h3>
+					<ul>
+						<li>digital art</li>
+						<li>photography</li>
+						<li>(some) web dev</li>
+					</ul>
+
+					<h3>I enjoy...</h3>
+					<ul>
+						<li>Mobile rhythm games (Phigros mainly)</li>
+						<li>Morimens :D (I really need to pick it back up)</li>
+						<li>breakcore and neoclassical music (and some indie)</li>
+					</ul>
+
+					<p>Fun fact: I have a <a href="https://www.notion.so/frtheatelier/GAME-DATABASE-22512132dcb680f2afb2fe3a79b25644?source=copy_link">list of mobile games</a> I played before if you're curious. You can probably talk to me about them.</p>
+				</div>
+			</div>
+		</div> 
+
+		<!-- Draggable DIV -->
+		<div id="window2" class="window glass">
+			<!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+			<div id="window2head" class="windowhead">
+				<div class="close-button" onclick="displayWindow(2)">╳</div>
+			</div>
+			<!--TODO: IF BORED OR SIGNIFICANTLY IRRITATED: CHANGE THE FORMAT OF THIS LMFAO-->
+			<div id="content-p" class="content" style="padding: 0px 0px !important;">
+				<div class="scroll-content" style="padding: 15px 50px">
+					<div id="header-row-p">
+						<h1 id="header-p">PORTFOLIO</h1>
+						<p id="subtitle-p">a snapshot of my recent projects. <br> you can click my art to view the full image.</p>
+					</div>
+					<div id="overview">
+						<h2>Programs and everything else</h2>
+						<div id="skill">
+							<div class="art"><h2>Art</h2></div>
+							<div class="art-tags">
+								<div class="tags">IbisPaintX</div>
+								<div class="tags">Canva</div>
+							</div>
+
+							<div class="prog"><h2>Programming</h2></div>
+							<div class="prog-tags">
+								<div class="tags">HTML</div>
+								<div class="tags">CSS</div>
+								<div class="tags">JavaScript</div>
+								<div class="tags">Godot</div>
+							</div>
+						</div>
+					</div>
+
+					<hr>
+
+					<!-- ART SECT -->
+					<div id="art-sect">
+						<h2>ART</h2>
+						<div id="art-row">
+							<!-- <div onclick="displayImage(1)">WHHA</div> -->
+							<div onclick="displayImage(1)"><img src="art\1.jpg"></div>
+							<div onclick="displayImage(2)"><img src="art\2.gif"></div>
+							<div onclick="displayImage(3)"><img src="art\3.jpg"></div>
+							<div onclick="displayImage(4)"><img src="art\4.jpg"></div>
+							<div onclick="displayImage(5)"><img src="art\5.jpg"></div>
+							<div onclick="displayImage(6)"><img src="art\6.jpg"></div>
+						</div>
+					</div>
+
+					<!-- PROG SECT -->
+					<div id="programs-sect">
+						<h2>PROGRMMING</h2>
+						<div id="programs-row">
+							<div class="program-card">
+								<h4>Miscellaneous web apps</h4>
+								<p>includes a perfect number checker and a guessing game inspired by Caesar's cypher.</p>
+								<div id="tags">
+									<span>HTML</span>
+									<span>CSS</span>
+									<span>JavaScript</span>
+
+									<a href="https://fr-theatelier.glitch.me">visit project</a>
+								</div>
+							</div>
+							<div class="program-card">
+								<h4>ClassQuest</h4>
+								<p>Minigames include puzzle slider (made by a friend) and word chain game (by me). Made it for a hackathon with a friend :)</p>
+								<div id="tags">
+									<span>Python</span>
+									<span>pygame</span>
+
+									<a href="https://github.com/frtheatelier/ClassQuest">visit project</a>
+								</div>
+							</div>
+							<div class="program-card">
+								<h4>Capybara bash</h4>
+								<p>Proof-of-concept platformer featuring a Capybara. Assets and html site made by a friend, game algo developed by me and another teammate. Made it for a (different) hackathon :D</p>
+								<div id="tags">
+									<span>Godot</span>
+
+									<a href="https://github.com/frtheatelier/Capybara-Bash-Game">visit project</a>
+								</div>
+							</div>
+							<div class="program-card">
+								<h4>This website</h4>
+								<p>Personal site yipee :) Code is absolutely horrendous but it is an honest effort.</p>
+								<div id="tags">
+									<span>HTML</span>
+									<span>CSS</span>
+									<span>JavaScript</span>
+
+								</div>
+							</div>
+
+							<!-- refer to GitHub -->
+							<a href="https://github.com/frtheatelier">see more on github...</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> 
+
+		<!-- Draggable DIV -->
+		<div id="window3" class="window glass">
+			<!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+			<div id="window3head" class="windowhead">
+				<div class="close-button" onclick="displayWindow(3)">╳</div>
+			</div>
+			<p style="clear: both;">Move</p>
+			<p>this</p>
+			<p>DIV</p>
+		</div> 
+
+		<!-- Draggable DIV -->
+		<div id="window4" class="window glass">
+			<!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+			<div id="window4head" class="windowhead">
+				<div class="close-button" onclick="displayWindow(4)">╳</div>
+			</div>
+			<p style="clear: both;">Move</p>
+			<p>this</p>
+			<p>DIV</p>
+		</div> 
+	</div>
+
+	<!-- SHOWING FULL IMG -->
+    <div id="black-screen" onclick="closeImage(6)"></div>
+    <div id="full-images">
+        <figure id="full-1" class="full-art">
+            <button class="close-button" onclick="displayImage(1)">╳</button>
+            <img src="art\1.jpg" alt="img missing">
+            <figcaption>Andrea: under the spotlight</figcaption>
+        </figure>
+        <!-- <img id="full-1" class="full-art" src="art\1.jpg"> -->
+        <figure id="full-2" class="full-art">
+            <button class="close-button" onclick="displayImage(2)">╳</button>
+            <img src="art\2.gif" alt="img missing">
+            <figcaption>Nox: looped animation</figcaption>
+        </figure>
+        <figure id="full-3" class="full-art">
+            <button class="close-button" onclick="displayImage(3)">╳</button>
+            <img src="art\3.jpg" alt="img missing">
+            <figcaption>Under the moonlight</figcaption>
+        </figure>
+        <figure id="full-4" class="full-art">
+            <button class="close-button" onclick="displayImage(4)">╳</button>
+            <img src="art\4.jpg" alt="img missing">
+            <figcaption>GAIA: rough sketch / thumbnail</figcaption>
+        </figure>
+        <figure id="full-5" class="full-art">
+            <button class="close-button" onclick="displayImage(5)">╳</button>
+            <img src="art\5.jpg" alt="img missing">
+            <figcaption>Nox: mystery</figcaption>
+        </figure>
+        <figure id="full-6" class="full-art">
+            <button class="close-button" onclick="displayImage(6)">╳</button>
+            <img src="art\6.jpg" alt="img missing">
+            <figcaption>Nox: character sketch</figcaption>
+        </figure>
+    </div>
+
+
+	<script>
+		// HIDE STUFF
+		for (let i = 1; i < 5; i++) {
+			let s = ''
+			if (i == 1 || i == 4) { s = 'left' } 
+			else { s = 'right' }
+
+			document.getElementById("window"+i).style.display = "none";
+			dragElement(document.getElementById("window"+i))
+			hoverExpand(document.getElementById("menu"+i), s)
+		}
+
+		// FULL IMG
+		for (let i = 1; i < 7; i++) {
+			document.getElementById("full-"+i).style.display = "none";
+		}
+        document.getElementById("black-screen").style.display = "none";
+        document.getElementById("full-images").style.display = "none";
+
+
+		// GENERATE PARTICLES -- TS GPT-ED
+		const star = document.getElementById("star-wrapper");
+
+		function createParticle(x, y) {
+			const particle = document.createElement("div");
+			particle.className = "particle";
+
+			const size = 3 + Math.random() * 4;
+			particle.style.width = size + "px";
+			particle.style.height = size + "px";
+
+			const angle = Math.random() * 2 * Math.PI; // Random angle in radians
+			const distance = 40 + Math.random() * 20;  // Travel distance in px
+
+			const offsetX = Math.cos(angle) * distance;
+			const offsetY = Math.sin(angle) * distance;
+
+			particle.style.left = x + "px";
+			particle.style.top = y + "px";
+
+			// Set custom properties for animation
+			particle.style.setProperty("--dx", offsetX + "px");
+			particle.style.setProperty("--dy", offsetY + "px");
+
+			document.body.appendChild(particle);
+
+			setTimeout(() => {
+				particle.remove();
+			}, 1000);
+		}
+
+		setInterval(() => {
+			const rect = star.getBoundingClientRect();
+			const x = rect.left + rect.width / 2;
+			const y = rect.top + rect.height / 2;
+			createParticle(x, y);
+		}, 150); // every 150ms
+
+		
+	</script>
+</body>
+
+</html>
