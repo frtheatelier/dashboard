@@ -36,6 +36,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Manrope:wght@200..800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
+    <!-- FLATICON -->
+    <link href="assets\uicons\uicons-brands\css\uicons-brands.css" rel="stylesheet"> <!--load all styles -->
+
 </head>
 <body>
 	<!-- hover/select audios -->
@@ -46,12 +49,16 @@
 	<div id="container">
 		<!-- BASE -->
 		<nav id="heading">
-			<div onclick="toggleMute()" class="music upscale-grand">
+			<div onclick="toggleMute()" class="music upscale-grand tooltip-right" style="border: none;">
 				<img src="assets/note.png">
 				<div id="crossline"></div>
+                <span class="tooltiptext">Toggle SFX</span>
 			</div>
 			<p>fr. the atelier</p>
-			<div onclick="displayCredits()" class="star upscale-grand"><img src="assets/star_2.png"></div>
+			<div onclick="displayCredits()" class="star upscale-grand tooltip" style="border: none;">
+                <img src="assets/star_2.png">
+                <span class="tooltiptext">Show credits/attribution</span>
+            </div>
 		</nav>
 		<div id="subcontainer">
 			<div id="bg-radial-top"></div>
@@ -86,7 +93,17 @@
 		</div>
 		<div id="credits" class="credit">
 			<p>art by @frtheatelier</p>
-			<p>sfx by ...</p>
+			<p>
+                <span class="tooltip">included</span> sfx:
+                <span class="tooltiptext">not all are used but I might switch around sfx</span>
+            </p>
+            <ul>
+                <li><a href="https://freesound.org/s/653382/">select.wav</a> by Krokulator</li>
+                <li><a href="https://freesound.org/s/523763/">Select, Granted 06.wav</a> by LilMati</li>
+                <li><a href="https://freesound.org/s/713595/">random_UI_selection</a> by harrisonlace</li>
+            </ul>
+            <p>Uicons by <a href="https://www.flaticon.com/uicons">Flaticon</a></p>
+            <p>Font from Google Fonts</p>
 		</div>
 
 		<!-- WINDOWS - play around later -->
@@ -186,7 +203,7 @@
 							<div onclick="displayImage(1)"><img src="art\1.jpg"></div>
 							<div onclick="displayImage(2)"><img src="art\2.gif"></div>
 							<div onclick="displayImage(3)"><img src="art\3.jpg"></div>
-							<div onclick="displayImage(4)"><img src="art\4.jpg"></div>
+							<div onclick="displayImage(4)"><img src="art\4.png"></div>
 							<div onclick="displayImage(5)"><img src="art\5.jpg"></div>
 							<div onclick="displayImage(6)"><img src="art\6.jpg"></div>
 						</div>

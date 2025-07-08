@@ -526,7 +526,7 @@ img {
     right: 7.6%;
 
     height: auto;
-    width: 165px;
+    width: 300px;
 
     /* animation: fade-drop 0.5s linear; */
     opacity: 0;
@@ -739,8 +739,30 @@ img {
     right: 105%;
 }
 
+.tooltip-right .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+
+    background-color: rgba(155, 106, 0, 0.726);
+    color: #fff2de;
+    border: 1px solid rgb(226, 173, 0);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 1px;
+
+    position: absolute;
+    z-index: 1;
+
+    top: -5%;
+    left: 105%;
+}
+
 /* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
+.tooltip:hover .tooltiptext, .tooltip-right:hover .tooltiptext {
     visibility: visible;
 }
 

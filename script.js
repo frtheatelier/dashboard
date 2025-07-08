@@ -100,7 +100,7 @@ function closeImage(total) {
 }
 
 function displayWindow(num) {
-    var select = document.getElementById('lilmati-select'), // lilmati, krokulat, harrisonlace
+    var select = document.getElementById('lilmati-select'), 
         close = document.getElementById('krokulat-select');
 
     // 1. get window id + number (1-4)
