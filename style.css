@@ -1,3 +1,50 @@
+/* @media */
+/* --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+
+/* credits to https://medium.com/@efficientHacks/how-to-display-different-content-based-on-screen-width-with-css-only-1e1caca5801 for the idea */
+
+@media all and (min-width: 1300px) {
+    .desktop {
+        display: block;
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .particle {
+        display: block;
+    }
+}
+
+@media all and (max-width: 1300px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .particle {
+        display: none;
+    }
+}
+
+#mcontainer {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+
+    max-width: fit-content;
+}
+
+#mcontainer p {
+    margin: 12px 0;
+}
+
 /* BODY */
 /* --------------------------------------------------------------------------------- */
 /* --------------------------------------------------------------------------------- */
