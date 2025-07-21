@@ -4,7 +4,7 @@
 
 /* credits to https://medium.com/@efficientHacks/how-to-display-different-content-based-on-screen-width-with-css-only-1e1caca5801 for the idea */
 
-@media all and (min-width: 1300px) {
+@media all and (min-width: 1100px) {
     .desktop {
         display: block;
     }
@@ -18,7 +18,7 @@
     }
 }
 
-@media all and (max-width: 1300px) {
+@media all and (max-width: 1100px) {
     .desktop {
         display: none;
     }
